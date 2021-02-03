@@ -1,0 +1,94 @@
+**********************sv.co********************** ==> learn and ask qust.
+
+Math.sqrt 49
+
+puts"valli"
+
+strings ' ' or " "
+
+symbols will not take any space(:string)
+
+Nothing(nil)
+
+" 'valli' " displays with single quotes or use escape sequence(\)
+
+
+to embedd values within string use #{} within double quotes
+
+
+symbol---> 
+
+:symbol_name
+
+array can store different data types
+
+-ve index calculated from last fr array
+
+puts array_name.reverse,a.max,a.min,a.sum
+
+hash uses curly braces
+
+key value concept
+
+a={"valli" => "cse"}
+puts a["valli"]
+
+gets to read string
+
+a= gets
+gets input from user
+
+chomp or strip functions can be used to remove new line or white spaces
+
+2.6.3 :001 > a = gets
+valli
+2.6.3 :002 > puts a
+valli
+ => nil 
+2.6.3 :003 > a.length
+ => 6 
+2.6.3 :004 > a =gets.strip
+valli
+2.6.3 :005 > a.length
+ => 5 
+
+77.to_s ---> converts int to float
+
+ a = gets.to_i
+ghj
+2.6.3 :007 > puts a
+0
+ => nil 
+2.6.3 :008 > a = gets.to_i
+98
+2.6.3 :009 > puts a
+98
+ => nil 
+2.6.3 :010 > a= gets
+valli
+2.6.3 :011 > a= a.to_i
+2.6.3 :012 > puts a
+0
+ => nil 
+2.6.3 :013 > a = gets
+das
+2.6.3 :014 > a = gets
+77
+2.6.3 :015 > a = a.to_s
+2.6.3 :016 > puts a
+77
+ => nil 
+
+valliyapan@valliyapan-HP-Laptop-15-da1xxx:~$ ruby first.rb
+enter a and b
+4 5
+
+4 is the sum
+valliyapan@valliyapan-HP-Laptop-15-da1xxx:~$ ruby first.rb
+enter a and b
+4
+5
+9 is the sum
+
+*************************** puts "hii" if c>9 ******************
+prints hii after checking condition
