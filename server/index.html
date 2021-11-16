@@ -1,125 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-    Document
+   Document
   </title>
-  <link href="index.css" rel="stylesheet" />
+  <link href="index.css" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
   </script>
-</head>
-
-<body>
+ </head>
+ <body>
   <div class="content">
-    <h1>
-      Common Repository Files
-    </h1>
-    <div class="files">
-      <div class="file-box" id="data2.txt">
-        <a href="data2.txt">
-          data2.txt
-        </a>
-        <input class="button" id="data2.txt" onclick="del(this.id)" type="button" value="Delete" />
-      </div>
-      <div class="file-box" id="git.txt">
-        <a href="git.txt">
-          file-git.txt
-        </a>
-        <input class="button" id="git.txt" onclick="del(this.id)" type="button" value="Delete" />
-      </div>
-      <div class="file-box" id="dat.txt">
-        <a href="dat.txt">
-          dat.txt
-        </a>
-        <input class="button" id="dat.txt" onclick="del(this.id)" type="button" value="Delete" />
-      </div>
-      <div class="file-box" id="basics.txt">
-        <a href="basics.txt">
-          basics.txt
-        </a>
-        <input class="button" id="basics.txt" onclick="del(this.id)" type="button" value="Delete" />
-      </div>
-      <div class="file-box" id="da.txt">
-        <a href="da.txt">
-          da.txt
-        </a>
-        <input class="button" id="da.txt" onclick="del(this.id)" type="button" value="Delete" />
-      </div>
+   <h1>
+    Common Repository Files
+   </h1>
+   <div class="files">
+    <div class="file-box" id="data2.txt">
+     <a href="/server/data2.txt">
+      data2.txt
+     </a>
+     <input class="button" id="/server/data2.txt" onclick="del(this.id)" type="button" value="Delete"/>
     </div>
-    <div class="posting">
-      <h2>
-        Upload files (POST REQUEST)
-      </h2>
-      <form action="server" enctype="multipart/form-data" method="post">
-        <p>
-          Choose a file to upolad:
-        </p>
-        <input class="upload" name="file" type="file" />
-        <input class="upload" type="submit" value="Upload" />
-      </form>
+    <div class="file-box" id="git.txt">
+     <a href="/server/git.txt">
+      file-git.txt
+     </a>
+     <input class="button" id="/server/git.txt" onclick="del(this.id)" type="button" value="Delete"/>
     </div>
-    <div class="put">
-      <h2>
-        Update files (PUT REQUEST)
-      </h2>
-      <form id="form">
-        <p>
-          Choose a file to upolad:
-        </p>
-        <input class="upload" id="upload" name="file" type="file" />
-        <input class="upload" onclick="put()" type="button" value="Upload" />
-      </form>
+    <div class="file-box" id="dat.txt">
+     <a href="/server/dat.txt">
+      dat.txt
+     </a>
+     <input class="button" id="/server/dat.txt" onclick="del(this.id)" type="button" value="Delete"/>
     </div>
-    <div class="head">
-      <h2>
-        Check headers (HEAD REQUEST)
-      </h2>
-      <form id="form-head">
-        <p>
-          File name:
-        </p>
-        <input class="check" id="head-file" type="text" />
-        <input class="check" onclick="head_req()" type="button" value="Check" />
-      </form>
+    <div class="file-box" id="basics.txt">
+     <a href="/server/basics.txt">
+      basics.txt
+     </a>
+     <input class="button" id="/server/basics.txt" onclick="del(this.id)" type="button" value="Delete"/>
     </div>
+    <div class="file-box" id="da.txt">
+     <a href="/server/da.txt">
+      da.txt
+     </a>
+     <input class="button" id="/server/da.txt" onclick="del(this.id)" type="button" value="Delete"/>
+    </div>
+    <div class="file-box" id="panda.jpg">
+     <a href="/server/panda.jpg">
+      panda.jpg
+     </a>
+     <input class="button" id="/server/panda.jpg" onclick="del(this.id)" type="button" value="Delete"/>
+    </div>
+    <div class="file-box" id="lorem.txt">
+     <a href="/server/lorem.txt">
+      lorem.txt
+     </a>
+     <input class="button" id="/server/lorem.txt" onclick="del(this.id)" type="button" value="Delete"/>
+    </div>
+   </div>
+   <div class="rename">
+    <h2>
+     Rename files (GET Vs POST REQUEST)
+    </h2>
+    <p>
+     Select method type:
+    </p>
+    <input id="get" name="method" type="radio" value="get"/>
+    <label for="get">
+     GET
+    </label>
+    <input checked="" id="post" name="method" type="radio" value="post"/>
+    <label for="post">
+     POST
+    </label>
+    <form action="" id="form-method">
+     <label for="oldname">
+      File name:
+     </label>
+     <br/>
+     <input class="check" id="oldname" name="oldname" type="text"/>
+     <br/>
+     <label for="newname">
+      New name:
+     </label>
+     <br/>
+     <input class="check" id="newname" name="newname" type="text"/>
+     <br/>
+     <br/>
+     <input class="check" onclick="set_method()" type="submit" value="Submit"/>
+    </form>
+   </div>
+   <div class="posting">
+    <h2>
+     Upload files (POST REQUEST)
+    </h2>
+    <form action="server" enctype="multipart/form-data" method="post">
+     <p>
+      Choose a file to upolad:
+     </p>
+     <input class="upload" name="file" type="file"/>
+     <input class="upload" type="submit" value="Upload"/>
+    </form>
+   </div>
+   <div class="put">
+    <h2>
+     Update files (PUT REQUEST)
+    </h2>
+    <form id="form">
+     <p>
+      Choose a file to upolad:
+     </p>
+     <input class="upload" id="upload" name="file" type="file"/>
+     <input class="upload" onclick="put()" type="button" value="Upload"/>
+    </form>
+   </div>
+   <div class="head">
+    <h2>
+     Check headers (HEAD REQUEST)
+    </h2>
+    <form id="form-head">
+     <p>
+      File name:
+     </p>
+     <input class="check" id="head-file" type="text"/>
+     <input class="check" onclick="head_req()" type="button" value="Check"/>
+    </form>
+   </div>
   </div>
-</body>
-<script>
+ </body>
+ <script>
   function del(id) {
     $.ajax({
       url: id,
       type: 'DELETE',
       success: function (result) {
-        // Do something with the result
+        alert("File deleted! Refresh to check.");
       }
     });
   }
   function put() {
     var name = document.getElementById("upload").value;
     var ind = name.lastIndexOf("\\") + 1;
-    name = name.slice(ind);
-    alert("name = " + name);
+    name = "server/" + name.slice(ind);
     var fd = new FormData(document.getElementById("form"));
     $.ajax({
       url: name,
       type: 'PUT',
       data: fd,
       processData: false,
-      contentType: false
+      contentType: false,
+      success: function (result) { 
+        alert("Resource added to server. Refresh to check.") 
+      }
     })
   }
   function head_req() {
     var name = document.getElementById("head-file").value;
     //console.log(name);
-    alert("name = " + name);
     $.ajax({
-      url: name,
-      type: 'HEAD'
+      url: "server/" + name, 
+      type: 'HEAD', 
+      success: function (result) { 
+        alert("Check response header in networks tab.") 
+      }
     })
   }
-</script>
-
+  function set_method() { 
+    if (document.getElementById("get").checked) { 
+        meth = "get"; 
+    } 
+    else if (document.getElementById("post").checked) { 
+        meth = "post"; 
+    } 
+    $("#form-method").attr("method", meth); 
+  }
+ </script>
 </html>
